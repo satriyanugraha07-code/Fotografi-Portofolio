@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Satriya Nugraha — Photographer & Visual Storyteller</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* DESIGN SYSTEM */
+        :root {
+            --color-primary: #1A1A1A;
+            --color-muted: #555555;
+            --color-accent: #9B7A42; /* Premium Gold/Bronze Accent */
+            --color-accent-light: #F7F5F0;
+            --color-border: #E5E5E5;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F0F2F5;
+            color: var(--color-primary);
+            font-family: var(--font-body);
+            line-height: 1.5;
+            padding: 40px 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* PAPER LAYOUT (F4) */
+        .cv-page {
+            background: #FFFFFF;
+            width: 215mm;
+            min-height: 330mm;
+            margin: 0 auto;
+            padding: 15mm 15mm;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        /* HEADER SECTION */
+        .cv-header {
+            text-align: center;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .cv-name {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .cv-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .cv-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.78rem;
+            color: var(--color-muted);
+            font-weight: 400;
+        }
+
+        .cv-contact span {
+            display: flex;
+            align-items: center;
+        }
+
+        .cv-contact span:not(:last-child)::after {
+            content: "•";
+            margin-left: 15px;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        .cv-contact a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .cv-contact a:hover {
+            color: var(--color-accent);
+        }
+
+        /* GRID LAYOUT */
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 24px;
+        }
+
+        /* COLUMNS */
+        .cv-main-col {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .cv-sidebar-col {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            border-left: 1px solid var(--color-border);
+            padding-left: 20px;
+        }
+
+        /* SECTION STYLING */
+        .cv-section {
+            position: relative;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: var(--color-border);
+        }
+
+        /* ABOUT */
+        .about-text {
+            font-size: 0.84rem;
+            line-height: 1.6;
+            color: var(--color-muted);
+            text-align: justify;
+        }
+
+        /* TIMELINE (EXPERIENCE & EDUCATION) */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .timeline-role {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .timeline-date {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            white-space: nowrap;
+        }
+
+        .timeline-org {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--color-muted);
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .timeline-gpa {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: 4px;
+        }
+
+        .timeline-desc {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .timeline-desc li {
+            font-size: 0.76rem;
+            line-height: 1.45;
+            color: var(--color-muted);
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 2px;
+        }
+
+        .timeline-desc li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+
+        /* SIDEBAR COMPONENTS */
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .service-item {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--color-muted);
+            padding: 6px 10px;
+            background-color: var(--color-accent-light);
+            border-left: 3px solid var(--color-accent);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .skill-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .skill-group-name {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+        }
+
+        .skill-tags {
+            font-size: 0.78rem;
+            color: var(--color-muted);
+            line-height: 1.4;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: var(--color-muted);
+            margin-bottom: 4px;
+        }
+
+        .language-item span:first-child {
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+
+        /* FLOATING PRINT HELPER (HIDDEN IN PRINT) */
+        .print-btn-container {
+            position: fixed;
+            top: 20px;
+            right: calc(50% - 107.5mm - 120px);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100px;
+        }
+
+        .btn-action {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.2s ease;
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-action:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-back {
+            background-color: #FFFFFF;
+            color: var(--color-primary);
+            border: 1px solid var(--color-border);
+        }
+
+        .btn-back:hover {
+            background-color: #F8F9FA;
+            color: var(--color-primary);
+        }
+
+        /* PRINT CONFIGURATION */
+        @media print {
+            body {
+                background-color: #FFFFFF;
+                padding: 0;
+                margin: 0;
+                color: #000000;
+            }
+
+            .cv-page {
+                box-shadow: none;
+                margin: 0 auto;
+                padding: 8mm 12mm; /* Reduced top/bottom padding to give 15px extra space */
+                width: 215mm;
+                height: 330mm; /* Enforce exact F4 page height in print */
+                page-break-after: always;
+                page-break-inside: avoid;
+                break-after: page;
+                break-inside: avoid;
+                overflow: hidden; /* Prevent extra pages from tiny content bleed */
+                box-sizing: border-box;
+            }
+
+            .print-btn-container {
+                display: none;
+            }
+
+            /* Enforce F4 page size with no browser default margin overlap */
+            @page {
+                size: 215mm 330mm;
+                margin: 0; /* Sets page margin to 0, hiding browser headers/footers automatically */
+            }
+        }
+        
+        /* PORTFOLIO SHOWCASE PAGE STYLES */
+        .portfolio-page {
+            margin-top: 40px;
+            break-before: page;
+            page-break-before: always;
+        }
+
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .portfolio-page-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--color-primary);
+            text-transform: uppercase;
+        }
+
+        .portfolio-page-subtitle {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 10px;
+            max-width: 145mm;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .portfolio-card {
+            border: 1px solid var(--color-border);
+            background-color: #FFFFFF;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .portfolio-img-wrapper {
+            width: 100%;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            background-color: #F8F9FA;
+            border: 1px solid #EEEEEE;
+        }
+
+        .portfolio-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .portfolio-card-desc {
+            padding: 2px 4px;
+        }
+
+        .portfolio-card-tag {
+            font-size: 0.58rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 1px;
+        }
+
+        .portfolio-card-title {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1px;
+        }
+
+        .portfolio-card-meta {
+            font-size: 0.68rem;
+            color: var(--color-muted);
+        }
+
+        .portfolio-footer {
+            border-top: 1px solid var(--color-border);
+            padding-top: 10px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--color-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Print Action Buttons (Invisible in PDF output) -->
+    <div class="print-btn-container">
+        <button class="btn-action" onclick="window.print()">Simpan PDF</button>
+        <a href="index.html" class="btn-action btn-back">Kembali</a>
+    </div>
+
+    <!-- CV Paper Container -->
+    <main class="cv-page">
+        
+        <!-- Header -->
+        <header class="cv-header">
+            <h1 class="cv-name">Satriya Nugraha</h1>
+            <p class="cv-title">Fotografer & Storyteller Visual</p>
+            <div class="cv-contact">
+                <span>Klaten, Jawa Tengah</span>
+                <span>+62 858-7941-3890</span>
+                <span><a href="mailto:satriyanugraha07@gmail.com">satriyanugraha07@gmail.com</a></span>
+                <span><a href="https://linkedin.com/in/satriya-nugraha" target="_blank">linkedin.com/in/satriya-nugraha</a></span>
+            </div>
+        </header>
+
+        <!-- Two Column Grid -->
+        <div class="cv-grid">
+            
+            <!-- Left Main Column -->
+            <div class="cv-main-col">
+                
+                <!-- Tentang Saya -->
+                <section class="cv-section">
+                    <h2 class="section-title">Tentang Saya</h2>
+                    <p class="about-text">
+                        Seorang storyteller visual kreatif dengan kepekaan tajam terhadap komposisi, pencahayaan, dan momen autentik. Berpengalaman dalam menghasilkan konten visual yang memikat — mulai dari fotografi acara hingga sesi pemotretan editorial komersial. Berbekal landasan kuat dalam design thinking dan koordinasi konten, saya menghadirkan visi artistik sekaligus presisi teknis di setiap proyek.
+                    </p>
+                </section>
+
+                <!-- Pengalaman Kerja -->
+                <section class="cv-section">
+                    <h2 class="section-title">Pengalaman Kerja</h2>
+                    <div class="timeline">
+                        
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Social Media Manager & Content Creator</h3>
+                                <span class="timeline-date">Jun 2022 – Des 2024</span>
+                            </div>
+                            <span class="timeline-org">PMK FKIP UNS — Surakarta, Indonesia</span>
+                            <ul class="timeline-desc">
+                                <li>Mengelola dan mengembangkan kehadiran media sosial organisasi dengan branding visual yang konsisten di berbagai platform.</li>
+                                <li>Memproduksi 100+ konten kreatif termasuk fotografi, video reels, dan aset desain grafis.</li>
+                                <li>Mengarahkan strategi narasi visual untuk berbagai acara dan kampanye organisasi.</li>
+                                <li>Menjadi anggota steering committee — memimpin perencanaan, koordinasi, dan dokumentasi visual acara.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Event Leader & Visual Documentation Head</h3>
+                                <span class="timeline-date">Jan 2023 – Mar 2023</span>
+                            </div>
+                            <span class="timeline-org">Camp Trafo — Surakarta, Indonesia</span>
+                            <ul class="timeline-desc">
+                                <li>Memimpin perencanaan penuh dan pelaksanaan acara kepemimpinan yang dihadiri oleh beberapa tim.</li>
+                                <li>Mengawasi seluruh jalannya fotografi acara dan dokumentasi visual selama program berlangsung.</li>
+                                <li>Mengoordinasikan pembicara, relawan, dan peserta untuk memastikan kelancaran operasional acara.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Event Photographer & Liaison Officer</h3>
+                                <span class="timeline-date">Mar 2022 – Sep 2022</span>
+                            </div>
+                            <span class="timeline-org">Mechanical Education Festival — Surakarta, Indonesia</span>
+                            <ul class="timeline-desc">
+                                <li>Mendokumentasikan kegiatan CADD melalui fotografi profesional dan media visual.</li>
+                                <li>Mengoordinasikan komunikasi antara juri, peserta, dan penyelenggara.</li>
+                                <li>Memandu peserta memahami seluruh regulasi acara dan bertindak sebagai narahubung utama.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Pendidikan -->
+                <section class="cv-section">
+                    <h2 class="section-title">Pendidikan</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Sarjana Pendidikan Teknik Mesin</h3>
+                                <span class="timeline-date">Sep 2021 – Jan 2025</span>
+                            </div>
+                            <span class="timeline-org">Universitas Sebelas Maret (UNS) — Surakarta, Indonesia</span>
+                            <div class="timeline-gpa">IPK: 3.75 / 4.00 — Lulus dalam 3.5 Tahun (Wisudawan Pertama Angkatan 2021)</div>
+                            <ul class="timeline-desc">
+                                <li>Asisten Dosen Gambar Teknik — membimbing mahasiswa dalam desain dan komunikasi visual.</li>
+                                <li>Berpartisipasi dalam Program Kemitraan Masyarakat Internasional (PKMI).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Sidebar Column -->
+            <div class="cv-sidebar-col">
+                
+                <!-- Layanan Fotografi -->
+                <section class="cv-section">
+                    <h2 class="section-title">Layanan</h2>
+                    <div class="services-list">
+                        <div class="service-item">Fotografi Acara & Dokumenter</div>
+                        <div class="service-item">Potret & Branding Pribadi</div>
+                        <div class="service-item">Konten Media Sosial</div>
+                        <div class="service-item">Desain Grafis & Visual Branding</div>
+                        <div class="service-item">Produksi & Edit Video</div>
+                    </div>
+                </section>
+
+                <!-- Keahlian & Alat -->
+                <section class="cv-section">
+                    <h2 class="section-title">Keahlian & Alat</h2>
+                    <div class="skills-container">
+                        
+                        <div class="skill-group">
+                            <span class="skill-group-name">Fotografi & Editing</span>
+                            <p class="skill-tags">Adobe Lightroom, Adobe Photoshop, Canva, Video Editing</p>
+                        </div>
+
+                        <div class="skill-group">
+                            <span class="skill-group-name">Alat Desain Teknik</span>
+                            <p class="skill-tags">AutoCAD, SolidWorks, Microsoft Office</p>
+                        </div>
+
+                        <div class="skill-group">
+                            <span class="skill-group-name">Kreatif & Metodologi</span>
+                            <p class="skill-tags">Storytelling Visual, Komposisi, Color Grading, Konten Media Sosial</p>
+                        </div>
+
+                        <div class="skill-group">
+                            <span class="skill-group-name">Soft Skills</span>
+                            <p class="skill-tags">Berpikir Kreatif, Kepemimpinan, Kolaborasi Tim, Public Speaking, Manajemen Waktu</p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Bahasa -->
+                <section class="cv-section">
+                    <h2 class="section-title">Bahasa</h2>
+                    <div class="language-item">
+                        <span>Bahasa Indonesia</span>
+                        <span>Penutur Asli</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Bahasa Inggris</span>
+                        <span>Menengah</span>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- PAGE 2: PORTFOLIO SHOWCASE -->
+    <main class="cv-page portfolio-page">
+        <!-- Page Header -->
+        <header class="portfolio-header">
+            <h2 class="portfolio-page-title">Portofolio Karya Terpilih</h2>
+            <p class="portfolio-page-subtitle">Sorotan Karya Utama: Fotografi Potret & Personal Branding</p>
+        </header>
+
+        <!-- Portfolio Gallery Grid -->
+        <div class="portfolio-grid">
+            
+            <!-- Card 1 -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                    <img src="https://drive.google.com/thumbnail?id=1_IQ0Z0g3zyeJ286GMS54v5QmmFsoZZ95&sz=w800" alt="Portrait Karya Satriya Nugraha 1">
+                </div>
+                <div class="portfolio-card-desc">
+                    <span class="portfolio-card-tag">Studi Potret & Karakter</span>
+                    <h3 class="portfolio-card-title">Frame #IMG_0095</h3>
+                    <p class="portfolio-card-meta">Studio Session · Surakarta</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                    <img src="https://drive.google.com/thumbnail?id=1Cql5Kgddy8S5F2iuMkDPiWGFEVNBfr9S&sz=w800" alt="Portrait Karya Satriya Nugraha 2">
+                </div>
+                <div class="portfolio-card-desc">
+                    <span class="portfolio-card-tag">Ekspresi & Karakter</span>
+                    <h3 class="portfolio-card-title">Frame #IMG_0191</h3>
+                    <p class="portfolio-card-meta">Studio Session · Surakarta</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                    <img src="https://drive.google.com/thumbnail?id=1Mj-oFNX5ts52Rho3ah93W1cJylY2F0Do&sz=w800" alt="Portrait Karya Satriya Nugraha 3">
+                </div>
+                <div class="portfolio-card-desc">
+                    <span class="portfolio-card-tag">Pencahayaan Sinematik</span>
+                    <h3 class="portfolio-card-title">Frame #IMG_0187-Enhanced</h3>
+                    <p class="portfolio-card-meta">Studio Session · Surakarta</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrapper">
+                    <img src="https://drive.google.com/thumbnail?id=1z0vYI7jba_-2-MWS5bOdGvAao3ojWam4&sz=w800" alt="Portrait Karya Satriya Nugraha 4">
+                </div>
+                <div class="portfolio-card-desc">
+                    <span class="portfolio-card-tag">Bayangan & Cahaya</span>
+                    <h3 class="portfolio-card-title">Frame #IMG_0478</h3>
+                    <p class="portfolio-card-meta">Studio Session · Surakarta</p>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="portfolio-footer">
+            <p>Untuk melihat portofolio lengkap dan kolaborasi lebih lanjut, silakan hubungi kontak di halaman pertama.</p>
+        </footer>
+    </main>
+
+</body>
+</html>

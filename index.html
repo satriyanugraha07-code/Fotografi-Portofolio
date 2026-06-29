@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUTTERRIYA — Cinematic Photography Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A premium dark-mode cinematic photography portfolio presenting visual stories, journeys, portraits, landscapes, street moments, and memories through the lens.">
+    <meta name="keywords" content="photography, portfolio, cinematic, dark mode, luxury, storytelling, landscape, portrait, street photography, travel">
+    <meta name="author" content="Shutterriya">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shutterriya.com/">
+    <meta property="og:title" content="SHUTTERRIYA — Cinematic Photography Portfolio">
+    <meta property="og:description" content="A premium dark-mode cinematic photography portfolio presenting visual stories, journeys, portraits, landscapes, street moments, and memories through the lens.">
+    <meta property="og:image" content="aset/Portrait/IMG_0191.JPG">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shutterriya.com/">
+    <meta property="twitter:title" content="SHUTTERRIYA — Cinematic Photography Portfolio">
+    <meta property="twitter:description" content="A premium dark-mode cinematic photography portfolio presenting visual stories, journeys, portraits, landscapes, street moments, and memories through the lens.">
+    <meta property="twitter:image" content="aset/Portrait/IMG_0191.JPG">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=1.8">
+</head>
+<body>
+
+    <!-- Premium Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-shutter preloader-shutter-left"></div>
+        <div class="preloader-shutter preloader-shutter-right"></div>
+        <div class="preloader-content">
+            <h2 class="preloader-logo">SHUTTERRIYA</h2>
+            <div class="preloader-bar"></div>
+            <span class="preloader-status" id="preloader-status">Preparing frame...</span>
+            <span class="preloader-sub">Cinematic Portfolio</span>
+        </div>
+    </div>
+
+    <!-- Film Grain Overlay -->
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo" id="brand-logo">SHUTTERRIYA</a>
+            
+            <nav class="desktop-menu" aria-label="Main Navigation">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#featured" class="nav-link">Stories</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#resume" class="nav-link">CV</a>
+                <a href="#journeys" class="nav-link">Journeys</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="hamburger-line line-1"></span>
+                <span class="hamburger-line line-2"></span>
+                <span class="hamburger-line line-3"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-overlay" id="drawer-overlay"></div>
+        <div class="drawer-content">
+            <nav class="mobile-menu" aria-label="Mobile Navigation">
+                <a href="#hero" class="mobile-link">Home</a>
+                <a href="#featured" class="mobile-link">Stories</a>
+                <a href="#about" class="mobile-link">About</a>
+                <a href="#resume" class="mobile-link">CV</a>
+                <a href="#journeys" class="mobile-link">Journeys</a>
+                <a href="#gallery" class="mobile-link">Gallery</a>
+                <a href="#contact" class="mobile-link">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- SECTION 1: HERO -->
+        <section id="hero" class="hero-section" aria-label="Hero Screen">
+            <!-- Dynamic Background will be injected or manipulated via JS for Parallax -->
+            <div class="hero-bg" id="hero-bg"></div>
+            <div class="hero-lens-flare" id="hero-lens-flare"></div>
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <span class="hero-label reveal-item">Visual Documentary Portfolio</span>
+                <h1 class="hero-title reveal-item">SHUTTERRIYA</h1>
+                <p class="hero-tagline reveal-item">“A Journey Through My Lens”</p>
+                <p class="hero-subtext reveal-item">Every frame preserves a story worth remembering.</p>
+                
+                <div class="hero-btn-container reveal-item">
+                    <a href="#gallery" class="btn-primary" id="explore-btn">Explore Gallery</a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" aria-hidden="true">
+                <span class="scroll-text">Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FEATURED STORIES -->
+        <section id="featured" class="section-container featured-section">
+            <div class="section-header reveal-item">
+                <span class="section-label">Selected Works</span>
+                <h2 class="section-title">Featured Stories</h2>
+                <p class="section-subtitle">Selected frames from journeys, encounters, and quiet moments.</p>
+            </div>
+
+            <!-- Asymmetrical Masonry Editorial Grid -->
+            <div class="featured-grid" id="featured-grid">
+                <!-- Javascript will inject 6-8 asymmetric layout cards here -->
+            </div>
+        </section>
+
+        <!-- SECTION 3: ABOUT THE PHOTOGRAPHER -->
+        <section id="about" class="section-container about-section">
+            <div class="about-grid">
+                <!-- Left Column: Portrait -->
+                <div class="about-image-wrapper reveal-item">
+                    <div class="about-image-card">
+                        <img id="about-portrait" src="aset/Portrait/IMG_0095.JPG" alt="Photographer Portrait" loading="lazy">
+                        <div class="about-img-overlay"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="about-content-wrapper reveal-item">
+                    <span class="section-label">Behind The Lens</span>
+                    <h2 class="about-title">Behind The Lens</h2>
+                    <p class="about-text-lead">
+                        Photography allows me to preserve fleeting moments and transform them into lasting memories. Through every journey, every encounter, and every scene, I seek stories waiting to be told.
+                    </p>
+                    <p class="about-text-body">
+                        My work is not only about capturing what is seen, but also about preserving what is felt — the quiet pauses, the passing light, the human presence, and the emotions that often disappear too quickly.
+                    </p>
+
+                    <!-- Statistics -->
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-num" id="stat-years">5+</span>
+                            <span class="stat-label">Years of Memories</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num" id="stat-stories">30+</span>
+                            <span class="stat-label">Visual Stories</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num" id="stat-moments">1,000+</span>
+                            <span class="stat-label">Moments Preserved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3.5: RESUME / CV -->
+        <section id="resume" class="section-container resume-section">
+            <div class="section-header reveal-item">
+                <span class="section-label">Curriculum Vitae</span>
+                <h2 class="section-title">Resume Profesional</h2>
+                <p class="section-subtitle">Storytelling visual, pengalaman konten, dan latar belakang profesional.</p>
+            </div>
+            
+            <div class="resume-grid">
+                <!-- Left Column: Experience & Education Timeline -->
+                <div class="resume-timeline-col reveal-item">
+                    <div class="resume-sub-header">
+                        <svg class="resume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        <h3 class="resume-col-title">Pengalaman & Pendidikan</h3>
+                    </div>
+                    
+                    <div class="timeline">
+                        <!-- Timeline item 1: PMK FKIP UNS -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Juni 2022 – Des 2024</div>
+                            <h4 class="timeline-role">Social Media Manager & Content Creator</h4>
+                            <span class="timeline-org">PMK FKIP UNS – Surakarta, Indonesia</span>
+                            <ul class="timeline-details">
+                                <li>Mengelola dan mengembangkan kehadiran media sosial organisasi dengan branding visual yang konsisten di berbagai platform.</li>
+                                <li>Memproduksi 100+ konten kreatif termasuk fotografi, video reels, dan aset desain grafis.</li>
+                                <li>Mengarahkan strategi narasi visual untuk berbagai acara dan kampanye organisasi.</li>
+                                <li>Menjadi anggota steering committee — memimpin perencanaan, koordinasi, dan dokumentasi visual acara.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Timeline item 2: Camp Trafo -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Jan 2023 – Mar 2023</div>
+                            <h4 class="timeline-role">Event Leader & Visual Documentation Head</h4>
+                            <span class="timeline-org">Camp Trafo – Surakarta, Indonesia</span>
+                            <ul class="timeline-details">
+                                <li>Memimpin perencanaan penuh dan pelaksanaan acara kepemimpinan yang dihadiri oleh beberapa tim.</li>
+                                <li>Mengawasi seluruh jalannya fotografi acara dan dokumentasi visual selama program berlangsung.</li>
+                                <li>Mengoordinasikan pembicara, relawan, dan peserta untuk memastikan kelancaran operasional acara.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Timeline item 3: Mechanical Education Festival -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Mar 2022 – Sept 2022</div>
+                            <h4 class="timeline-role">Event Photographer & Liaison Officer</h4>
+                            <span class="timeline-org">Mechanical Education Festival – Surakarta, Indonesia</span>
+                            <ul class="timeline-details">
+                                <li>Mendokumentasikan kegiatan CADD melalui fotografi profesional dan media visual.</li>
+                                <li>Mengoordinasikan komunikasi antara juri, peserta, dan penyelenggara.</li>
+                                <li>Memandu peserta memahami seluruh regulasi acara dan bertindak sebagai narahubung utama.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Timeline item 4: UNS Education -->
+                        <div class="timeline-item education-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Sept 2021 – Jan 2025</div>
+                            <h4 class="timeline-role">Sarjana Pendidikan Teknik Mesin</h4>
+                            <span class="timeline-org">Universitas Sebelas Maret (UNS) – Surakarta, Indonesia</span>
+                            <div class="timeline-meta-info">IPK: 3.75 / 4.00 · Lulus 3.5 Tahun</div>
+                            <ul class="timeline-details">
+                                <li>Lulus dalam waktu 3,5 tahun sebagai wisudawan pertama angkatan 2021.</li>
+                                <li>Asisten Dosen Gambar Teknik — membimbing mahasiswa dalam desain dan komunikasi visual.</li>
+                                <li>Berpartisipasi dalam Program Kemitraan Masyarakat Internasional (PKMI).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Skills, Services & Download PDF -->
+                <div class="resume-info-col reveal-item">
+                    <!-- Services Card -->
+                    <div class="resume-card-widget">
+                        <h3 class="widget-title">Layanan Fotografi</h3>
+                        <div class="services-list">
+                            <span class="service-tag">Fotografi Acara & Dokumenter</span>
+                            <span class="service-tag">Potret & Branding Pribadi</span>
+                            <span class="service-tag">Pembuatan Konten Media Sosial</span>
+                            <span class="service-tag">Desain Grafis & Branding Visual</span>
+                            <span class="service-tag">Produksi & Penyuntingan Video</span>
+                        </div>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="resume-card-widget">
+                        <h3 class="widget-title">Alat & Keahlian</h3>
+                        
+                        <div class="skills-group">
+                            <span class="skills-group-name">Fotografi & Editing</span>
+                            <div class="skills-tags">
+                                <span>Adobe Lightroom</span>
+                                <span>Adobe Photoshop</span>
+                                <span>Canva</span>
+                                <span>Video Editing</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-group">
+                            <span class="skills-group-name">Alat Desain</span>
+                            <div class="skills-tags">
+                                <span>AutoCAD</span>
+                                <span>SolidWorks</span>
+                                <span>Microsoft Office</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-group">
+                            <span class="skills-group-name">Keahlian Kreatif & Soft Skills</span>
+                            <div class="skills-tags">
+                                <span>Storytelling Visual</span>
+                                <span>Komposisi</span>
+                                <span>Color Grading</span>
+                                <span>Berpikir Kreatif</span>
+                                <span>Kepemimpinan</span>
+                                <span>Kolaborasi Tim</span>
+                                <span>Public Speaking</span>
+                                <span>Manajemen Waktu</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-group">
+                            <span class="skills-group-name">Bahasa</span>
+                            <div class="skills-tags">
+                                <span>Bahasa Indonesia (Native)</span>
+                                <span>Bahasa Inggris (Intermediate)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download PDF Widget -->
+                    <div class="resume-card-widget download-widget">
+                        <h3 class="widget-title">CV & Portofolio</h3>
+                        <p class="download-text">Lihat versi cetak folio F4 digital interaktif, atau unduh berkas Curriculum Vitae lengkap dalam format PDF.</p>
+                        <div class="resume-actions-container">
+                            <a href="cv-print.html" class="btn-primary resume-action-btn" target="_blank" id="view-print-cv-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;margin-right:8px;"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                <span>Lihat Versi Cetak</span>
+                            </a>
+                            <a href="cv-satriya-nugraha.pdf" class="btn-primary resume-action-btn btn-secondary" download id="download-cv-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;margin-right:8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                <span>Unduh CV PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: VISUAL JOURNEYS (Categories) -->
+        <section id="journeys" class="section-container journeys-section">
+            <div class="section-header reveal-item">
+                <span class="section-label">Moods & Mediums</span>
+                <h2 class="section-title">Visual Journeys</h2>
+                <p class="section-subtitle">Explore photographs through moods, places, and moments.</p>
+            </div>
+
+            <!-- Categories Grid -->
+            <div class="journeys-grid" id="journeys-grid">
+                <!-- Javascript will inject 5 Category Cards -->
+            </div>
+        </section>
+
+        <!-- SECTION 5: CINEMATIC GALLERY -->
+        <section id="gallery" class="section-container gallery-section">
+            <div class="section-header reveal-item">
+                <span class="section-label">The Archive</span>
+                <h2 class="section-title">Cinematic Gallery</h2>
+                <p class="section-subtitle">A collection of frames shaped by light, movement, and memory.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="gallery-filters reveal-item">
+                <button class="filter-tab active" data-filter="all" aria-label="Show all photos">All Frames</button>
+                <button class="filter-tab" data-filter="Portrait" aria-label="Filter by Portrait">Portraits</button>
+                <button class="filter-tab" data-filter="Street" aria-label="Filter by Street">Street</button>
+                <button class="filter-tab" data-filter="Landscape" aria-label="Filter by Landscape">Landscapes</button>
+                <button class="filter-tab" data-filter="Travel" aria-label="Filter by Travel">Travel</button>
+                <button class="filter-tab" data-filter="Daily Moments" aria-label="Filter by Daily Moments">Daily Moments</button>
+            </div>
+
+            <!-- Masonry Gallery -->
+            <div class="gallery-masonry" id="gallery-masonry">
+                <!-- Javascript will inject all images and luxury placeholders -->
+            </div>
+        </section>
+
+        <!-- SECTION 6: QUOTE SECTION -->
+        <section id="quote" class="quote-section">
+            <div class="quote-bg" id="quote-bg"></div>
+            <div class="quote-overlay"></div>
+            <div class="quote-content reveal-item">
+                <div class="quote-mark" aria-hidden="true">“</div>
+                <blockquote class="quote-text">
+                    Photography is the art of holding time still.
+                </blockquote>
+                <cite class="quote-author">SHUTTERRIYA</cite>
+            </div>
+        </section>
+
+        <!-- SECTION 7: CONTACT -->
+        <section id="contact" class="section-container contact-section">
+            <div class="contact-card reveal-item">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="contact-title">Let’s Create Something Beautiful Together</h2>
+                <p class="contact-lead">
+                    For collaborations, stories, portraits, or visual projects, let’s connect and create something memorable.
+                </p>
+
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/shutterriya/" class="contact-btn" target="_blank" rel="noopener noreferrer" id="instagram-link">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="mailto:satriyanugraha07@gmail.com" class="contact-btn" id="email-link">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://wa.me/6285879413890" class="contact-btn" target="_blank" rel="noopener noreferrer" id="whatsapp-link">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SECTION 8: FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">SHUTTERRIYA</span>
+                <p class="footer-tagline">A Journey Through My Lens</p>
+            </div>
+            
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="#hero">Home</a>
+                <a href="#featured">Stories</a>
+                <a href="#journeys">Journeys</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 SHUTTERRIYA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Lightbox Preview">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        
+        <!-- Lightbox Close Button -->
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <!-- Navigation Buttons -->
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous Image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next Image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <!-- Image Container -->
+        <div class="lightbox-content" id="lightbox-content">
+            <div class="lightbox-img-wrapper">
+                <img id="lightbox-img" src="" alt="Fullscreen view">
+            </div>
+            <!-- Caption Info -->
+            <div class="lightbox-caption">
+                <span class="lightbox-category" id="lightbox-category">Category</span>
+                <h3 class="lightbox-title" id="lightbox-title">Image Title</h3>
+                <p class="lightbox-desc" id="lightbox-desc">This is a poetic description about the photo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js?v=1.6"></script>
+</body>
+</html>
